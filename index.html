@@ -8,10 +8,109 @@
 <body>
     
 
+
+
+
+
+
+<!-- <button id="btn1">Click me</button>
+<button id="dblclick">Click me 2 times</button>
+<button id="hover">Ya ek box h</button> 
+//Event task
+<button id="btn">Button</button>
+<p id="text">Off</p>
+<div class="box"></div>
+
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 0.3s;
+  }
+
+  .black-bg {
+    background: black;
+  }
+</style>
+
+<script>
+let box = document.querySelector(".box");
+
+// hover se class toggle
+box.addEventListener("mouseover", () => {
+    box.classList.toggle("black-bg");
+});
+</script>-->
+
+
+<!-- <button id="btn">Add Paragraph</button>
+<div class="box" style="width:300px;height:200px;border:2px solid black;padding:10px;margin-top:10px;"></div>
+
+<script>
+let box = document.querySelector(".box");
+let btn = document.querySelector("#btn");
+
+btn.addEventListener("mouseover", () => {
+    let p = document.createElement("p");
+    p.innerText = "hover";
+    box.append(p);
+});
+btn.addEventListener("click", () => {
+    if(box.lastChild){
+        box.lastChild.remove(); 
+    }
+   
+});
+
+</script> -->
+
+<script src="event.js"></script>
+
+
+
+
+<!-- Input -->
+
+  <input type="text" id="nameInput" placeholder="Apna naam likho">
+  <input type="number" id="ageInput" placeholder="Apni age likho">
+  <input type="text" id="cityInput" placeholder="Apni City likho">
+  <button id="showBtn">Show Name</button>
+
+  <script>
+let nameInput = document.querySelector("#nameInput");
+let ageInput = document.querySelector("#ageInput");
+let cityInput = document.querySelector("#cityInput");
+let btn = document.querySelector("#showBtn");
+
+btn.addEventListener("click", () => {
+    alert(
+        "Naam: " + nameInput.value + 
+        "\nAge: " + ageInput.value + 
+        "\nCity: " + cityInput.value
+    );
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- <script src="practice.js"></script> -->
     <!-- <script src="Variable.js"></script> -->
     <!-- <script src="function.js"></script> -->
     <!-- <script src="Array.js"></script> -->
-     <script src="object.js"></script>
+     <!-- <script src="object.js"></script> -->
+     
 </body>
 </html>
