@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <h4 class="text-center mb-4">Register Form</h4>
+
+          <form id="uform">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" id="name" class="form-control">
+              <p id="nameerror" class="text-danger"></p>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Age</label>
+              <input type="number" id="age" class="form-control">
+              <p id="ageerror" class="text-danger"></p>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">City</label>
+              <input type="text" id="city" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" id="email" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="pass" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" id="cpass" class="form-control">
+            </div>
+
+            <button type="submit" id="submitinput" class="btn btn-primary w-100">
+              Register
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+
+        const sub = document.querySelector("#submitinput");
+        let nameerr = document.querySelector("#nameerror");
+        let ageerr = document.querySelector("#ageerror");
+
+        sub.addEventListener("click", (e) => {
+            e.preventDefault();
+            if(namevalidation()){
+                alert("name success")
+            }
+            if(agevalidation()){
+                alert("name success")
+            }
+        });
+        
+
+
+        function namevalidation(){
+            let name = document.querySelector("#name").value.trim();
+
+            if(name.length == 0){
+                nameerr.innerHTML = "Name is required";
+                return false;
+            }
+            if(name.length < 3){
+                nameerr.innerHTML = "valid name enter";
+                return false;
+            }
+            if(name.length > 11){
+                nameerr.innerHTML = "only 11 later allow"
+                return false;
+            }
+            if(!name.match(/^[A-Za-z ]+$/)){
+                nameerr.innerHTML = "only alfabate allow";
+                return false;
+            }
+
+            nameerr.innerHTML = "";
+            return true;
+            
+        };
+
+        function agevalidation(){
+            let age = document.querySelector("#age").value.trim();
+
+            if(age.length == 0){
+                ageerr.innerHTML = "Name is required";
+                return false;
+            }
+            if(age.length < 3){
+                ageerr.innerHTML = "valid age enter";
+                return false;
+            }
+            if(age.length > 11){
+                ageerr.innerHTML = "only 11 later allow"
+                return false;
+            }
+            if(age.match(/^[A-Za-z ]+$/)){
+                ageerr.innerHTML = "only alfabate allow";
+                return false;
+            }
+
+            nameerr.innerHTML = "";
+            return true;
+            
+        };
+
+    </script>
+
+
+</body>
+</html>
