@@ -64,13 +64,14 @@
             </div>
 
             <div class="card-body">
-              <form>
+              <form id="Createform">
                 <div class="mb-3">
                   <label class="form-label">Name</label>
                   <input
                     type="text"
                     class="form-control"
                     placeholder="Enter name"
+                    id="createname"
                   />
                 </div>
 
@@ -80,6 +81,7 @@
                     type="number"
                     class="form-control"
                     placeholder="Enter age"
+                    id="createage"
                   />
                 </div>
 
@@ -89,6 +91,7 @@
                     type="text"
                     class="form-control"
                     placeholder="Enter city"
+                    id="createcity"
                   />
                 </div>
 
@@ -103,6 +106,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="api.js"></script>
   </body>
 </html>
